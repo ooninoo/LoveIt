@@ -618,3 +618,13 @@
     # whether to use object-fit-images to be compatible with older browsers
     # 是否使用 object-fit-images 来兼容旧式浏览器
     objectFit = false
+
+  # Google adsense
+  # 谷歌广告联盟
+  [params.adsense]
+    enable = false
+    client = ""
+    inArticleSlot = ""
+    [toc]
+      # 文章栏索引广告开关，需要先在params.page.toc开启右侧目录展示
+      enable = false
