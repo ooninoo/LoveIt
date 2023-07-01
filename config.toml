@@ -439,7 +439,7 @@
         # located in "themes/LoveIt/assets/lib/valine/emoji/" directory
         # you can store your own data files in the same path under your project:
         # "assets/lib/valine/emoji/"
-        # emoji 数据文件名称, 默认是 "google.yml"
+        # emoji 数据文件名称, 默认是valine官方默认的表情（新浪微博emoji）
         # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
         # 位于 "themes/LoveIt/assets/lib/valine/emoji/" 目录
         # 可以在你的项目下相同路径存放你自己的数据文件:
