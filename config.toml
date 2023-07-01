@@ -624,7 +624,7 @@
   [params.adsense]
     enable = false
     client = ""
-    inArticleSlot = ""
     [toc]
       # 文章栏索引广告开关，需要先在params.page.toc开启右侧目录展示
       enable = false
+      slot = ""
