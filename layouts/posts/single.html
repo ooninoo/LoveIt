@@ -11,29 +11,36 @@
         {{- $toc = dict "enable" false -}}
     {{- end -}}
 
-    {{- /* Auto TOC */ -}}
-    {{- if ne $toc.enable false -}}
-        <div class="toc" id="toc-auto">
-            <h2 class="toc-title">{{ T "contents" }}</h2>
-            <div class="toc-content{{ if eq $toc.auto false }} always-active{{ end }}" id="toc-content-auto"></div>
+    {{- $ads := .Site.Params.adsense -}}
 
-            {{- if ne $ads.enable false -}}
-            {{- if ne $ads.toc.enable false -}}
+    {{- /* Auto TOC */ -}}
+    <div class="toc" id="toc-auto">
+        {{- if ne $toc.enable false -}}
+            <div style="display: block;">
+                <h2 class="toc-title">{{ T "contents" }}</h2>
+                <div class="toc-content{{ if eq $toc.auto false }} always-active{{ end }}" id="toc-content-auto"></div>
+            </div>
+        {{- end -}}
+
+        <!-- <p>111: {{$ads.enable}}<p> -->
+        {{- if eq $ads.enable true -}}
+        {{- if eq $ads.toc.enable true -}}
+            <div style="display:block;margin-top: 10rem;">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{$ads.client}}"
                 crossorigin="anonymous"></script>
                 <ins class="adsbygoogle"
                         style="display:block"
                         data-ad-client="{{$ads.client}}"
-                        data-ad-slot="{{$ads.slot}}"
+                        data-ad-slot="{{$ads.toc.slot}}"
                         data-ad-format="auto"
                         data-full-width-responsive="true"></ins>
                 <script>
                         (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-            {{- end -}}
-            {{- end -}}
-        </div>
-    {{- end -}}
+            </div>
+        {{- end -}}
+        {{- end -}}
+    </div>
 
     <article class="page single">
         {{- /* Title */ -}}
